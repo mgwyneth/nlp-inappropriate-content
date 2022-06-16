@@ -29,7 +29,7 @@ def get_padded_value(entry):
 def home():
     return "Hello World!"
 
-@app.route('/predict', methods = ["POST"])
+@app.route('/predict/', methods = ["POST"])
 def predict():
     entry = request.form.get('entry')
     entry_padded = get_padded_value(entry)
