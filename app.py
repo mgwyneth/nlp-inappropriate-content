@@ -25,11 +25,11 @@ def get_padded_value(entry):
     entry_padded = pad_sequences(entry_sequence, maxlen=200, padding='post', truncating='post')
     return entry_padded
 
-@app.route('/', methods=['GET'])
-def home():
+@app.route('/')
+def index():
     return "Hello World!"
 
-@app.route('/predict/', methods = ["POST"])
+@app.route('/predict', methods = ["POST"])
 def predict():
     entry = request.form.get('entry')
     entry_padded = get_padded_value(entry)
