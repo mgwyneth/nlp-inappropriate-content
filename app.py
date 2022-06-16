@@ -1,5 +1,4 @@
 from cmath import e
-from matplotlib.font_manager import json_load
 from flask import Flask, request, jsonify
 import numpy as np
 import json
