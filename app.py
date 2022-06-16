@@ -25,7 +25,7 @@ def get_padded_value(entry):
     entry_padded = pad_sequences(entry_sequence, maxlen=200, padding='post', truncating='post')
     return entry_padded
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
     return "Hello World!"
 
