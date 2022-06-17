@@ -33,7 +33,7 @@ def predict():
     entry = request.form.get('entry')
     entry_padded = get_padded_value(entry)
     prediction = model.predict(entry_padded)
-    labels = ['neutral', 'nsfw', 'suicide', 'cyberbullying']
+    labels = ['cyberbullying', 'suicide', 'neutral', 'nsfw']
     return jsonify({'prediction':str(labels[np.argmax(prediction)-1])})
 
 if __name__ == '__main__':
