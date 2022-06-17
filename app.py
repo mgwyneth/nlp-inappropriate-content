@@ -34,7 +34,7 @@ def predict():
     entry_padded = get_padded_value(entry)
     prediction = model.predict(entry_padded)
     labels = ['neutral', 'nsfw', 'suicide', 'cyberbullying']
-    return jsonify({'prediction':str(labels[np.argmax(prediction)])})
+    return jsonify({'prediction':str(labels[np.argmax(prediction)-1])})
 
 if __name__ == '__main__':
     app.run(debug=True)
